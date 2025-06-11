@@ -16,7 +16,7 @@ def mergeSort(numberArray):
         st.text(f"Left Subarray: {leftArray}")
         st.text(f"Right Subarray: {rightArray}")
 
-        #Pass the subarrays to the recursive call to further split the array
+        #Pass the subarrays to the recursive call to further split the array until one element is left
         mergeSort(leftArray)
         mergeSort(rightArray)
 
@@ -31,12 +31,13 @@ def mergeSort(numberArray):
                 r += 1
             i += 1
 
-        #Copy leftover elements to the array
+        #Copy leftover elements from left subarray to the array
         while l < len(leftArray):
             numberArray[i] = leftArray[l]
             l += 1
             i += 1
         
+        #Copy leftover elements from the right subarray to the array
         while r < len(rightArray):
             numberArray[i] = rightArray[r]
             r += 1
@@ -44,6 +45,7 @@ def mergeSort(numberArray):
     else:
         st.markdown(f"**No split needed (base case)** {numberArray}")
 
+#Function to print array elements in boxes
 def display_array_boxes(arr, label="Array"):
     st.markdown(f"**{label}:**")
     cols = st.columns(len(arr))
@@ -56,6 +58,7 @@ def display_array_boxes(arr, label="Array"):
 st.title("Merge Sort Algorithm")
 st.text("Merge sort is a divide-and-conquer algorithm used for sorting arrays or lists. It works by repeatedly dividing the input into smaller subarrays until each subarray contains only one element, then merging these subarrays back together in sorted order (Kumar, 2022).")
 
+#The initial unsorted array list
 unsortedArray = [7, 5, 16, 24, 13, 10, 3, 20]
 display_array_boxes(unsortedArray, "Sample Unsorted Array")
 st.write("")
