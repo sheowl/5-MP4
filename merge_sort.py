@@ -42,6 +42,8 @@ def mergeSort(numberArray):
             numberArray[arrayIndex] = rightArray[rightArrayIndex]
             rightArrayIndex += 1
             arrayIndex += 1
+
+        st.markdown(f"**Merged Subarrays:** {numberArray}")
     else:
         st.markdown(f"**No split needed (base case)** {numberArray}")
 
