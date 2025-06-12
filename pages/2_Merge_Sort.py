@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 
 # Initialize the counter for merge sort in session state
 if "merge_count" not in st.session_state:
@@ -57,7 +58,8 @@ def display_array_boxes(arr, label="Array"):
             unsafe_allow_html=True
         )
 
-st.title("Merge Sort Algorithm")
+st.set_page_config(page_title="Merge Sort", layout="wide")
+st.title("📊 Merge Sort Algorithm")
 st.text("Merge sort is a divide-and-conquer algorithm used for sorting arrays or lists. It works by repeatedly dividing the input into smaller subarrays until each subarray contains only one element, then merging these subarrays back together in sorted order (Kumar, 2022).")
 
 #The initial unsorted array list
