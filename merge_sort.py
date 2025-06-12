@@ -16,7 +16,7 @@ def mergeSort(numberArray):
         st.text(f"Left Subarray: {leftArray}")
         st.text(f"Right Subarray: {rightArray}")
 
-        #Pass the subarrays to the recursive call to further split the array until one element is left
+        #Pass the subarrays to the recursive call to further split the array
         mergeSort(leftArray)
         mergeSort(rightArray)
 
