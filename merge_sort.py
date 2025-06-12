@@ -21,27 +21,27 @@ def mergeSort(numberArray):
         mergeSort(rightArray)
 
         #Merge the subarrays
-        i = l = r = 0
-        while l < len(leftArray) and r < len(rightArray):
-            if(leftArray[l] < rightArray[r]):
-                numberArray[i] = leftArray[l]
-                l += 1
+        arrayIndex = leftArrayIndex = rightArrayIndex = 0
+        while leftArrayIndex < len(leftArray) and rightArrayIndex < len(rightArray):
+            if(leftArray[leftArrayIndex] < rightArray[rightArrayIndex]):
+                numberArray[arrayIndex] = leftArray[leftArrayIndex]
+                leftArrayIndex += 1
             else:
-                numberArray[i] = rightArray[r]
-                r += 1
-            i += 1
+                numberArray[arrayIndex] = rightArray[rightArrayIndex]
+                rightArrayIndex += 1
+            arrayIndex += 1
 
         #Copy leftover elements from left subarray to the array
-        while l < len(leftArray):
-            numberArray[i] = leftArray[l]
-            l += 1
-            i += 1
+        while leftArrayIndex < len(leftArray):
+            numberArray[arrayIndex] = leftArray[leftArrayIndex]
+            leftArrayIndex += 1
+            arrayIndex += 1
         
         #Copy leftover elements from the right subarray to the array
-        while r < len(rightArray):
-            numberArray[i] = rightArray[r]
-            r += 1
-            i += 1
+        while rightArrayIndex < len(rightArray):
+            numberArray[arrayIndex] = rightArray[rightArrayIndex]
+            rightArrayIndex += 1
+            arrayIndex += 1
     else:
         st.markdown(f"**No split needed (base case)** {numberArray}")
 
