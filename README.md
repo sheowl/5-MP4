@@ -56,5 +56,5 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
-*For submission of Machine Problem 4 in Design and Analysis of Algorithms*
-*[You may access the app the clicking through this link](https://hbdredmp4group5.streamlit.app/?embed_options=light_theme)*
+*For submission of Machine Problem 4 in Design and Analysis of Algorithms*\
+*[You may access the app by clicking through this link](https://hbdredmp4group5.streamlit.app/?embed_options=light_theme)*
